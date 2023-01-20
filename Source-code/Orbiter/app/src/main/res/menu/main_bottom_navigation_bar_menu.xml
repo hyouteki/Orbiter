@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_mbnbm_bookmarks"
+        android:enabled="true"
+        android:icon="@drawable/bookmarks_bottom_nav_bar_icon"
+        android:title="Bookmarks" />
+    <item
+        android:id="@+id/i_mbnbm_home"
+        android:enabled="true"
+        android:icon="@drawable/home_bottom_nav_bar_icon"
+        android:title="Home" />
+    <item
+        android:id="@+id/i_mbnbm_tabs"
+        android:enabled="true"
+        android:icon="@drawable/ic_tab"
+        android:title="Tabs" />
+</menu>

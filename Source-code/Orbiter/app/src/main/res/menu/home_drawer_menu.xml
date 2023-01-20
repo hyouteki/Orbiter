@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/i_hmd_new_tab"
+        android:icon="@drawable/ic_tab"
+        android:title="New tab" />
+
+    <item
+        android:id="@+id/i_hmd_new_private_tab"
+        android:icon="@drawable/ic_lock"
+        android:title="New private tab" />
+
+    <item
+        android:id="@+id/i_hmd_history"
+        android:icon="@drawable/ic_history"
+        android:title="History" />
+
+    <item
+        android:id="@+id/i_hmd_clear_history"
+        android:icon="@drawable/ic_clear_all"
+        android:title="Clear history" />
+
+    <item
+        android:id="@+id/i_hmd_add_bookmark"
+        android:icon="@drawable/ic_bookmark_add"
+        android:title="Add bookmark" />
+
+    <item
+        android:id="@+id/i_hmd_open_tab"
+        android:icon="@drawable/ic_tab"
+        android:title="Open tab" />
+
+    <item
+        android:id="@+id/i_hmd_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/i_hmd_exit"
+        android:icon="@drawable/ic_close"
+        android:title="Exit" />
+
+</menu>

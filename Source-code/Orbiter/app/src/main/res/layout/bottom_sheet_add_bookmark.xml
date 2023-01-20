@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_dialog_bg"
+    tools:context=".dialogs.AddBookmarkBottomSheet">
+
+    <View
+        android:id="@+id/v_bsab_handle"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorForeground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bsab_name_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Name"
+        app:boxBackgroundColor="@color/colorSecBackground"
+        app:endIconMode="clear_text"
+        app:helperText="*Required"
+        app:helperTextTextColor="@color/spaceRed"
+        app:layout_constraintTop_toBottomOf="@id/v_bsab_handle"
+        app:startIconDrawable="@drawable/ic_bookmark_add">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_bsab_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensans_regular"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/colorForeground"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_bsab_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorForeground"
+        android:text="Save"
+        android:textColor="@color/colorBackground"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_bsab_name_field" />
+
+    <View
+        android:id="@+id/v_bsab_space"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_bsab_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
