@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.settings.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/back"
+            app:title="@string/settings_title"
+            app:titleTextAppearance="@style/activity.title" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/general_settings_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/general_settings_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/general_settings_name"
+                    android:src="@drawable/rocket_launch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/general_settings_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_mono_regular"
+                    android:maxLines="1"
+                    android:text="@string/general_settings_name"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/general_settings_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jost_regular"
+                    android:maxLines="1"
+                    android:text="@string/general_settings_desc"
+                    android:textColor="?attr/colorSurfaceInverse"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/general_settings_icon"
+                    app:layout_constraintTop_toBottomOf="@id/general_settings_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/search_bar_settings_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/general_settings_container">
+
+                <ImageView
+                    android:id="@+id/search_bar_settings_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/search_settings_name"
+                    android:src="@drawable/search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/search_bar_settings_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_mono_regular"
+                    android:maxLines="1"
+                    android:text="@string/search_settings_name"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/search_bar_settings_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jost_regular"
+                    android:maxLines="1"
+                    android:text="@string/search_settings_desc"
+                    android:textColor="?attr/colorSurfaceInverse"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/search_bar_settings_icon"
+                    app:layout_constraintTop_toBottomOf="@id/search_bar_settings_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/appearance_settings_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/search_bar_settings_container">
+
+                <ImageView
+                    android:id="@+id/appearance_settings_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/appearance_settings_name"
+                    android:src="@drawable/color_lens"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/appearance_settings_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_mono_regular"
+                    android:maxLines="1"
+                    android:text="@string/appearance_settings_name"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/appearance_settings_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jost_regular"
+                    android:maxLines="1"
+                    android:text="@string/appearance_settings_desc"
+                    android:textColor="?attr/colorSurfaceInverse"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/appearance_settings_icon"
+                    app:layout_constraintTop_toBottomOf="@id/appearance_settings_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/history_settings_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/appearance_settings_container">
+
+                <ImageView
+                    android:id="@+id/history_settings_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/appearance_settings_name"
+                    android:src="@drawable/history"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/history_settings_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_mono_regular"
+                    android:maxLines="1"
+                    android:text="@string/history_settings_name"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/history_settings_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jost_regular"
+                    android:maxLines="1"
+                    android:text="@string/history_settings_desc"
+                    android:textColor="?attr/colorSurfaceInverse"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/history_settings_icon"
+                    app:layout_constraintTop_toBottomOf="@id/history_settings_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/web_view_settings_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/history_settings_container">
+
+                <ImageView
+                    android:id="@+id/web_view_settings_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/web_view_settings_name"
+                    android:src="@drawable/web"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/web_view_settings_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_mono_regular"
+                    android:maxLines="1"
+                    android:text="@string/web_view_settings_name"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/web_view_settings_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jost_regular"
+                    android:maxLines="1"
+                    android:text="@string/web_view_settings_desc"
+                    android:textColor="?attr/colorSurfaceInverse"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/web_view_settings_icon"
+                    app:layout_constraintTop_toBottomOf="@id/web_view_settings_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/about_settings_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/web_view_settings_container">
+
+                <ImageView
+                    android:id="@+id/about_settings_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/appearance_settings_name"
+                    android:src="@drawable/info"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/about_settings_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_mono_regular"
+                    android:maxLines="1"
+                    android:text="@string/about_settings_name"
+                    android:textColor="?attr/colorOnSecondaryContainer"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/about_settings_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/jost_regular"
+                    android:maxLines="1"
+                    android:text="@string/about_settings_desc"
+                    android:textColor="?attr/colorSurfaceInverse"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/about_settings_icon"
+                    app:layout_constraintTop_toBottomOf="@id/about_settings_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
