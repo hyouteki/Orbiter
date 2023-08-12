@@ -12,7 +12,11 @@ android {
 
     defaultConfig {
         applicationId "com.hyouteki.projects.orbiter"
+<<<<<<< HEAD
         minSdk 21
+=======
+        minSdk 26
+>>>>>>> master
         targetSdk 33
         versionCode 1
         versionName "1.0"
